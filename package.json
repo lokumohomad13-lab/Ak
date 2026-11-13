@@ -1,0 +1,28 @@
+{
+  "name": "mohomad-xmd-website",
+  "version": "1.0.0",
+  "description": "MOHOMAD XMD — Full-Stack Obsidian, Gold & Silver Cyber Portfolio, AI Tools & Bot Engineering Platform",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "mohomad-xmd",
+    "express",
+    "portfolio",
+    "whatsapp-bot",
+    "telegram-bot",
+    "railway"
+  ],
+  "author": "MOHOMAD XMD",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

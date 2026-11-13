@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOHOMAD XMD – Cyber Portfolio, AI Tools &amp; Bot Engineering</title>
+    <meta
+      name="description"
+      content="MOHOMAD XMD full-stack cyber engineering portfolio, interactive AI & crypto utilities, WhatsApp & Telegram bot suites, and production source downloads."
+    />
+    <meta name="keywords" content="MOHOMAD XMD, WhatsApp Bot, Telegram Bot, AI Tools, Node.js, Express.js, Railway" />
+    <meta name="theme-color" content="#050507" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MOHOMAD XMD" />
+    <meta property="og:title" content="MOHOMAD XMD – Cyber Portfolio, AI Tools & Bot Engineering" />
+    <meta property="og:description" content="Full-stack cyber engineering portfolio, AI & security tools, WhatsApp & Telegram bots." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "MOHOMAD XMD",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "All",
+        "description": "Full-stack cyber engineering portfolio, interactive AI utilities, and WhatsApp & Telegram bot automation hub."
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader-screen" role="status" aria-label="Loading MOHOMAD XMD">
+      <div class="loader-box">
+        <div class="loader-badge">XMD</div>
+        <h2 class="loader-title">MOHOMAD <span class="gold-text">XMD</span></h2>
+        <p class="loader-sub">Initializing workspace modules and utilities</p>
+        <div class="loader-bar-track"><div id="loader-bar" class="loader-bar-fill"></div></div>
+        <div class="loader-meta">
+          <span id="loader-percent" class="mono">0%</span>
+          <button type="button" id="skip-loader" class="link-gold">Skip intro</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated Background Canvas -->
+    <canvas id="cyber-bg" aria-hidden="true"></canvas>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <!-- Top Navigation Bar -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#home" class="brand" data-nav="home">MOHOMAD <span class="gold-text">XMD</span></a>
+
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <a href="#home" data-nav="home" class="nav-link active">Home</a>
+          <a href="#about" data-nav="about" class="nav-link">About</a>
+          <a href="#projects" data-nav="projects" class="nav-link">Projects</a>
+          <a href="#ai-tools" data-nav="ai-tools" class="nav-link">AI Tools</a>
+          <a href="#whatsapp-bots" data-nav="whatsapp-bots" class="nav-link">WA Bots</a>
+          <a href="#telegram-bots" data-nav="telegram-bots" class="nav-link">TG Bots</a>
+          <a href="#downloads" data-nav="downloads" class="nav-link">Downloads</a>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" id="open-search-btn" class="icon-btn" aria-label="Search site">Search</button>
+          <a href="#contact" data-nav="contact" class="btn-gold hide-sm">Contact Me</a>
+          <button type="button" id="mobile-menu-btn" class="icon-btn show-mobile" aria-label="Menu">Menu</button>
+        </div>
+      </div>
+
+      <div id="mobile-drawer" class="mobile-drawer hidden">
+        <a href="#home" data-nav="home" class="mobile-link">Home</a>
+        <a href="#about" data-nav="about" class="mobile-link">About Me</a>
+        <a href="#projects" data-nav="projects" class="mobile-link">My Projects</a>
+        <a href="#ai-tools" data-nav="ai-tools" class="mobile-link">AI Tools</a>
+        <a href="#whatsapp-bots" data-nav="whatsapp-bots" class="mobile-link">WhatsApp Bots</a>
+        <a href="#telegram-bots" data-nav="telegram-bots" class="mobile-link">Telegram Bots</a>
+        <a href="#downloads" data-nav="downloads" class="mobile-link">Downloads</a>
+        <a href="#contact" data-nav="contact" class="btn-gold full-width">Contact Me</a>
+      </div>
+    </header>
+
+    <main id="app-main" class="main-shell">
+      <!-- HOME PAGE -->
+      <section id="page-home" class="page-view active container">
+        <div class="hero-grid">
+          <div class="glass-panel hero-left">
+            <div class="hero-top-meta">
+              <p class="kicker">Full-Stack Engineering · Cyber Tooling · Bot Systems</p>
+              <div class="clock-box">
+                <span id="live-time" class="mono clock-time">00:00:00</span>
+                <span class="sep">·</span>
+                <span id="live-date" class="clock-date">Loading...</span>
+              </div>
+            </div>
+
+            <h1 class="hero-title">
+              Architecting Precision <span class="gold-text">Cyber Systems</span> &amp; Intelligent Bots
+            </h1>
+
+            <p class="lead">
+              Welcome to MOHOMAD XMD—a production hub for Node.js automation, WhatsApp Multi-Device frameworks, Telegram webhook architectures, and browser-native security utilities.
+            </p>
+
+            <div class="cta-row">
+              <button type="button" class="btn-gold" data-nav="projects">Explore Projects</button>
+              <button type="button" class="btn-silver" data-nav="downloads">Downloads &amp; Guides</button>
+              <button type="button" class="btn-silver" id="hero-search-btn">Search Hub</button>
+            </div>
+
+            <div class="social-strip">
+              <span class="muted">Direct Connect:</span>
+              <a href="https://wa.me/94700000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <span class="sep">·</span>
+              <a href="https://t.me/mohomadxmd" target="_blank" rel="noopener noreferrer">Telegram</a>
+              <span class="sep">·</span>
+              <a href="https://github.com/mohomadxmd" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+
+          <div class="glass-panel-gold hero-right">
+            <img src="assets/images/hero_cyber_core.jpg" alt="MOHOMAD XMD Obsidian and Gold Cyber Core" />
+            <div class="hero-img-scrim">
+              <p class="kicker">Obsidian Architecture · 2026 Release</p>
+              <h3>Node.js + Express Production Stack</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="glass-panel metric-card"><strong class="mono">18+</strong><span>Production Systems Built</span></div>
+          <div class="glass-panel metric-card"><strong class="mono gold-text">99.9%</strong><span>Target Webhook Uptime</span></div>
+          <div class="glass-panel metric-card"><strong class="mono">4</strong><span>Browser-Native Cyber Tools</span></div>
+          <div class="glass-panel metric-card"><strong class="mono gold-text">1-Click</strong><span>Railway &amp; GitHub Ready</span></div>
+        </div>
+      </section>
+
+      <!-- ABOUT PAGE -->
+      <section id="page-about" class="page-view container">
+        <div class="split-grid">
+          <div class="glass-panel-gold media-frame">
+            <img src="assets/images/profile_mohomad_xmd.jpg" alt="Portrait of Mohomad XMD" />
+          </div>
+          <div class="glass-panel panel-pad">
+            <p class="kicker">About Me · Developer Profile</p>
+            <h1 class="section-title">Mohomad XMD</h1>
+            <p class="muted">Full-Stack Architect · Bot Systems &amp; Cyber Utilities · Colombo, Sri Lanka</p>
+            <p class="body-copy">
+              I design and build resilient Node.js web platforms, automated messaging bots, and cyber security tooling engineered for real-world reliability. Every system ships with clean environment variable separation, defensive HTTP security headers, and responsive glassmorphic interfaces for Android, iOS, and Desktop.
+            </p>
+            <div class="cta-row">
+              <a href="https://wa.me/94700000000" target="_blank" rel="noopener noreferrer" class="btn-gold">WhatsApp Me</a>
+              <a href="https://t.me/mohomadxmd" target="_blank" rel="noopener noreferrer" class="btn-silver">Telegram</a>
+              <a href="https://github.com/mohomadxmd" target="_blank" rel="noopener noreferrer" class="btn-silver">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS PAGE -->
+      <section id="page-projects" class="page-view container">
+        <div class="page-head">
+          <div>
+            <p class="kicker">Portfolio Archive</p>
+            <h1 class="section-title">My Projects</h1>
+          </div>
+          <div class="filter-bar">
+            <input type="text" id="project-search" class="input" placeholder="Filter projects..." aria-label="Filter projects" />
+            <div class="segmented" id="project-filters">
+              <button type="button" class="seg-btn active" data-cat="All">All</button>
+              <button type="button" class="seg-btn" data-cat="Automation">Automation</button>
+              <button type="button" class="seg-btn" data-cat="APIs">APIs</button>
+              <button type="button" class="seg-btn" data-cat="Security">Security</button>
+            </div>
+          </div>
+        </div>
+        <div id="projects-grid" class="cards-grid"></div>
+      </section>
+
+      <!-- AI TOOLS PAGE -->
+      <section id="page-ai-tools" class="page-view container">
+        <div class="page-head">
+          <div>
+            <p class="kicker">Browser-Native Developer Suite</p>
+            <h1 class="section-title">AI &amp; Cyber Tools</h1>
+          </div>
+          <div class="segmented" id="tool-tabs">
+            <button type="button" class="seg-btn active" data-tool="prompt">Prompt Architect</button>
+            <button type="button" class="seg-btn" data-tool="crypto">SHA-256 &amp; Base64</button>
+            <button type="button" class="seg-btn" data-tool="json">JSON Inspector</button>
+            <button type="button" class="seg-btn" data-tool="keygen">Key Generator</button>
+          </div>
+        </div>
+
+        <div id="tool-prompt" class="tool-pane active glass-panel panel-pad">
+          <h3>01. Prompt Architect &amp; Token Estimator</h3>
+          <div class="form-grid">
+            <input id="p-role" class="input" value="Senior Node.js & Security Architect" placeholder="Role" />
+            <input id="p-format" class="input" value="Annotated code + checklist" placeholder="Output Format" />
+          </div>
+          <textarea id="p-task" class="input" rows="3" placeholder="Objective">Design a rate-limited Express webhook endpoint for WhatsApp and Telegram bots.</textarea>
+          <pre id="p-output" class="code-box"></pre>
+          <button type="button" id="copy-prompt-btn" class="btn-gold">Copy Compiled Prompt</button>
+        </div>
+
+        <div id="tool-crypto" class="tool-pane glass-panel panel-pad">
+          <h3>02. SHA-256 &amp; Base64 Cyber Lab</h3>
+          <textarea id="c-input" class="input mono" rows="3">MOHOMAD-XMD-2026</textarea>
+          <div class="cta-row">
+            <button type="button" id="hash-btn" class="btn-gold">Compute SHA-256</button>
+            <button type="button" id="b64-enc-btn" class="btn-silver">Base64 Encode</button>
+            <button type="button" id="b64-dec-btn" class="btn-silver">Base64 Decode</button>
+          </div>
+          <pre id="c-output" class="code-box">Click an action above to inspect the output.</pre>
+        </div>
+
+        <div id="tool-json" class="tool-pane glass-panel panel-pad">
+          <h3>03. API JSON Payload Inspector</h3>
+          <textarea id="j-input" class="input mono" rows="7">{"brand":"MOHOMAD XMD","runtime":"Node.js 22","bots":["whatsapp","telegram"]}</textarea>
+          <div class="cta-row">
+            <button type="button" id="json-pretty-btn" class="btn-gold">Validate &amp; Format</button>
+            <button type="button" id="json-min-btn" class="btn-silver">Minify</button>
+          </div>
+          <p id="j-status" class="muted"></p>
+        </div>
+
+        <div id="tool-keygen" class="tool-pane glass-panel panel-pad">
+          <h3>04. Cryptographic .env Secret Generator</h3>
+          <div class="cta-row">
+            <button type="button" id="keygen-btn" class="btn-gold">Generate 32-Char Secret</button>
+            <button type="button" id="copy-keygen-btn" class="btn-silver">Copy Secret</button>
+          </div>
+          <pre id="k-output" class="code-box">Click Generate to create a secure key.</pre>
+        </div>
+      </section>
+
+      <!-- WHATSAPP BOTS PAGE -->
+      <section id="page-whatsapp-bots" class="page-view container">
+        <div class="split-grid">
+          <div class="glass-panel panel-pad">
+            <p class="kicker">Baileys Multi-Device · Node.js</p>
+            <h1 class="section-title">WhatsApp Bots Studio</h1>
+            <p class="body-copy">Test simulated command outputs and generate a ready-to-deploy `.env` file for your WhatsApp Multi-Device bot.</p>
+            <div class="cta-row">
+              <a href="https://wa.me/94700000000" target="_blank" rel="noopener noreferrer" class="btn-gold">Message on WhatsApp</a>
+            </div>
+          </div>
+          <div class="glass-panel-gold media-frame">
+            <img src="assets/images/project_whatsapp_bot.jpg" alt="WhatsApp Bot Hardware Hub" />
+          </div>
+        </div>
+
+        <div class="split-grid mt-24">
+          <div class="glass-panel panel-pad">
+            <h3>Command Simulator</h3>
+            <div id="wa-cmd-list" class="cmd-list"></div>
+            <pre id="wa-cmd-output" class="code-box mt-16"></pre>
+          </div>
+          <div class="glass-panel panel-pad">
+            <h3>Live `.env` Generator</h3>
+            <input id="wa-name" class="input" value="MOHOMAD-XMD" placeholder="Bot Name" />
+            <input id="wa-owner" class="input mt-12" value="94700000000" placeholder="Owner Number" />
+            <input id="wa-prefix" class="input mt-12" value="." placeholder="Prefix" />
+            <pre id="wa-env-preview" class="code-box mt-16"></pre>
+            <button type="button" id="wa-env-dl" class="btn-gold mt-12">Download .env File</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TELEGRAM BOTS PAGE -->
+      <section id="page-telegram-bots" class="page-view container">
+        <div class="split-grid">
+          <div class="glass-panel panel-pad">
+            <p class="kicker">Telegram Bot API · Webhook TLS</p>
+            <h1 class="section-title">Telegram Bots Suite</h1>
+            <p class="body-copy">Preview inline keyboards and copy stateless Express webhook handler code.</p>
+            <div class="cta-row">
+              <a href="https://t.me/mohomadxmd" target="_blank" rel="noopener noreferrer" class="btn-gold">Chat on Telegram</a>
+            </div>
+          </div>
+          <div class="glass-panel-gold media-frame">
+            <img src="assets/images/project_telegram_ai.jpg" alt="Telegram Neural Module" />
+          </div>
+        </div>
+
+        <div class="glass-panel panel-pad mt-24">
+          <h3>Webhook &amp; Inline Keyboard Preview</h3>
+          <input id="tg-msg" class="input mt-12" value="Welcome to MOHOMAD XMD Telegram Gateway." />
+          <pre id="tg-code" class="code-box mt-16"></pre>
+          <button type="button" id="copy-tg-btn" class="btn-gold mt-12">Copy Webhook Code</button>
+        </div>
+      </section>
+
+      <!-- DOWNLOADS PAGE -->
+      <section id="page-downloads" class="page-view container">
+        <div class="page-head">
+          <div>
+            <p class="kicker">Deployment &amp; Resources</p>
+            <h1 class="section-title">Downloads</h1>
+          </div>
+        </div>
+
+        <div class="cards-grid">
+          <div class="glass-panel-gold panel-pad">
+            <h3>Railway Configuration Pack</h3>
+            <p class="body-copy">Download `railway.json` and `.env.example` template for instant Railway deployment.</p>
+            <button type="button" id="dl-railway-env" class="btn-gold mt-16">Download .env.example</button>
+          </div>
+          <div class="glass-panel panel-pad">
+            <h3>Bot Starter Manifest</h3>
+            <p class="body-copy">Download a clean Node.js Express bot manifest `package.json` template.</p>
+            <button type="button" id="dl-bot-pkg" class="btn-silver mt-16">Download package.json</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT PAGE -->
+      <section id="page-contact" class="page-view container">
+        <div class="page-head">
+          <div>
+            <p class="kicker">Direct Communication</p>
+            <h1 class="section-title">Contact Me</h1>
+          </div>
+        </div>
+
+        <div class="split-grid">
+          <div class="glass-panel panel-pad">
+            <h3>Direct Channels</h3>
+            <p class="body-copy">Reach out directly on WhatsApp, Telegram, GitHub, or email.</p>
+            <div class="stack-links">
+              <a href="https://wa.me/94700000000" target="_blank" rel="noopener noreferrer" class="btn-gold">WhatsApp Direct</a>
+              <a href="https://t.me/mohomadxmd" target="_blank" rel="noopener noreferrer" class="btn-silver">Telegram @mohomadxmd</a>
+              <a href="https://github.com/mohomadxmd" target="_blank" rel="noopener noreferrer" class="btn-silver">GitHub Profile</a>
+              <a href="mailto:contact@mohomadxmd.dev" class="btn-silver">contact@mohomadxmd.dev</a>
+            </div>
+          </div>
+
+          <form id="contact-form" class="glass-panel panel-pad">
+            <h3>Send Encrypted Inquiry</h3>
+            <input id="f-name" class="input mt-12" type="text" required minlength="2" placeholder="Your Name" />
+            <input id="f-email" class="input mt-12" type="email" required placeholder="Email Address" />
+            <input id="f-subject" class="input mt-12" type="text" required value="Bot & Web Project Inquiry" placeholder="Subject" />
+            <textarea id="f-message" class="input mt-12" rows="4" required minlength="10" placeholder="Your message..."></textarea>
+            <p id="contact-status" class="muted mt-12"></p>
+            <button type="submit" class="btn-gold mt-16">Submit Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-label="Search site">
+      <div class="modal-box glass-panel-gold">
+        <div class="modal-head">
+          <input id="global-search-input" class="input" type="text" placeholder="Search pages, projects, commands, tools..." />
+          <button type="button" id="close-search-btn" class="icon-btn">Close</button>
+        </div>
+        <div id="global-search-results" class="search-results"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year-now"></span> MOHOMAD XMD. All rights reserved.</p>
+        <p class="muted">Node.js · Express.js · Railway Ready</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
